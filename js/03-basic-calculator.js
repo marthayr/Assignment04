@@ -4,13 +4,18 @@ import {subtract} from "./modules/calculator.js";
 import {multiply} from "./modules/calculator.js";
 import {divide} from "./modules/calculator.js";
 
+let num1;
+let num2;
+let operation;
+
+do{
 // COLLECT FIRST NUMBER FROM USER
-let num1 = parseFloat(prompt('Enter your first number.'));
+num1 = parseFloat(prompt('Enter your first number.'));
 // COLLECT SECOND NUMBER FROM USER
-let num2 = parseFloat(prompt('Enter a second number'));
+num2 = parseFloat(prompt('Enter a second number'));
 
 // COLLECT OPERATION TO PERFORM (+,-,*,/) FROM USER
-let operation = prompt('Choose an operation (+, -, *, /)');
+operation = prompt('Choose an operation (+, -, *, /)');
 
 // CHECK TO SEE WHAT OPERATION THEY'RE USING
 
@@ -30,8 +35,6 @@ switch (operation){
         break;
     default:
         alert('Invalid operation was entered. Try Again.');
-        operation = 'nope';
 }
-
-//console.log(`number 1: ${num1}  number 2: ${num2}  operation: ${operation}`);
+}while(operation!=='+'&& operation!== '-' && operation!== '*' && operation !== '/') 
 
